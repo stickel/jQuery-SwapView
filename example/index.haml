@@ -1,0 +1,40 @@
+!!! 5
+%html{:lang => 'en'}
+  %head
+    %title jQuery.SwapView example
+    %meta{:charset => 'utf-8'}
+    %link{:rel => 'stylesheet', :href => 'stylesheets/swapview.css'}
+
+  %body
+    #container
+      %h1 jQuery SwapView
+      %p The following examples show the various uses of jQuery.Swapview. Feel free to view the source or check it out on <a href="http://github.com/stickel/jQuery-SwapView">github</a>.
+      %section
+        %h2 Single trigger
+        %p At the minimum, jQuery.SwapView allows a single trigger to cycle through an unlimited number of slides.
+        .swapview-container#single-trigger
+          %ul.swap-views
+            %li.active.js-swapview
+              %img{:src => 'http://farm4.staticflickr.com/3348/3303142398_7c146e6d7e_q.jpg', :width => '150', :height => '150'}
+            %li.js-swapview
+              %img{:src => 'http://farm4.staticflickr.com/3535/3227741978_cb6392804c_q.jpg', :width => '150', :height => '150'}
+            %li.js-swapview
+              %img{:src => 'http://farm4.staticflickr.com/3572/3370362653_ba7a53eef3_q.jpg', :width => '150', :height => '150'}
+            %li.js-swapview
+              %img{:src => 'http://farm4.staticflickr.com/3635/3370362591_7b298c294f_q.jpg', :width => '150', :height => '150'}
+            %li.js-swapview
+              %img{:src => 'http://farm4.staticflickr.com/3541/3363630955_dce78c32bb_q.jpg', :width => '150', :height => '150'}
+            %li.js-swapview
+              %img{:src => 'http://farm3.staticflickr.com/2574/3774259586_aa35a69970_q.jpg', :width => '150', :height => '150'}
+          %nav.swapview-nav
+            %a.js-swapview-trigger{:class => 'm-button', :href => '#'}
+              Swap
+
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    %script{:src => "../jquery.swapview.js"}
+
+    :javascript
+      $(document).ready(function() {
+        $('#single-trigger').SwapView();
+      });
+

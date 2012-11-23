@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery.SwapView example</title>
+    <meta charset="utf-8">
+    <link href="stylesheets/swapview.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <h1>jQuery SwapView</h1>
+      <p>The following examples show the various uses of jQuery.Swapview. Feel free to view the source or check it out on <a href="http://github.com/stickel/jQuery-SwapView">github</a>.</p>
+      <section>
+        <h2>Single trigger</h2>
+        <p>At the minimum, jQuery.SwapView allows a single trigger to cycle through an unlimited number of slides.</p>
+        <div class="swapview-container" id="single-trigger">
+          <ul class="swap-views">
+            <li class="active js-swapview">
+              <img height="150" src="http://farm4.staticflickr.com/3348/3303142398_7c146e6d7e_q.jpg" width="150">
+            </li>
+            <li class="js-swapview">
+              <img height="150" src="http://farm4.staticflickr.com/3535/3227741978_cb6392804c_q.jpg" width="150">
+            </li>
+            <li class="js-swapview">
+              <img height="150" src="http://farm4.staticflickr.com/3572/3370362653_ba7a53eef3_q.jpg" width="150">
+            </li>
+            <li class="js-swapview">
+              <img height="150" src="http://farm4.staticflickr.com/3635/3370362591_7b298c294f_q.jpg" width="150">
+            </li>
+            <li class="js-swapview">
+              <img height="150" src="http://farm4.staticflickr.com/3541/3363630955_dce78c32bb_q.jpg" width="150">
+            </li>
+            <li class="js-swapview">
+              <img height="150" src="http://farm3.staticflickr.com/2574/3774259586_aa35a69970_q.jpg" width="150">
+            </li>
+          </ul>
+          <nav class="swapview-nav">
+            <a class="js-swapview-trigger m-button" href="#">
+              Swap
+            </a>
+          </nav>
+        </div>
+      </section>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="../jquery.swapview.js"></script>
+    <script>
+      //<![CDATA[
+        $(document).ready(function() {
+          $('#single-trigger').SwapView();
+        });
+      //]]>
+    </script>
+  </body>
+</html>
