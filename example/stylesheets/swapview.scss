@@ -1,0 +1,39 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#container {
+  margin: 0 auto;
+  padding-bottom: 1.82em;
+  width: 30em;
+  section {
+    border-top: 1px solid #e5e5e5;
+    padding-bottom: 1.82em * 2;
+  }
+  .swapview-container {
+    display: block;
+    height: 150px;
+    position: relative;
+    width: 150px;
+    .js-swapview {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      *display: inline;
+      *zoom: 1;
+    }
+  }
+  .swapview-nav {
+    position: absolute;
+    bottom: -1.5em;
+    left: 0;
+  }
+}
+
+.m-button {
+  background: hsla(190, 30%, 45%, 0.8);
+  color: hsla(190, 40%, 100%, 1);
+  padding: 0.41em;
+  text-decoration: none;
+}

@@ -1,0 +1,46 @@
+/* line 1, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* line 5, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+#container {
+  margin: 0 auto;
+  padding-bottom: 1.82em;
+  width: 30em;
+}
+/* line 9, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+#container section {
+  border-top: 1px solid #e5e5e5;
+  padding-bottom: 3.64em;
+}
+/* line 13, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+#container .swapview-container {
+  display: block;
+  height: 150px;
+  position: relative;
+  width: 150px;
+}
+/* line 18, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+#container .swapview-container .js-swapview {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  *display: inline;
+  *zoom: 1;
+}
+/* line 27, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+#container .swapview-nav {
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+}
+
+/* line 34, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+.m-button {
+  background: rgba(80, 138, 149, 0.8);
+  color: white;
+  padding: 0.41em;
+  text-decoration: none;
+}
