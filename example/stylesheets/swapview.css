@@ -32,6 +32,7 @@ body {
 }
 /* line 27, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
 #container .swapview-nav {
+  font-size: 0.82em;
   position: absolute;
   bottom: -1.5em;
   left: 0;
