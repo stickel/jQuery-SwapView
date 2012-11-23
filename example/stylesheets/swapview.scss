@@ -30,6 +30,18 @@ body {
     bottom: -1.5em;
     left: 0;
   }
+  // Multiple trigger styles
+  #multiple-triggers {
+    .swapview-nav {
+      width: 30em;
+    }
+    .js-swapview-trigger {
+      border-right: 1px solid hsla(190, 30%, 25%, 1);
+      &:first-child {
+        border-left: 1px solid hsla(190, 30%, 25%, 1);
+      }
+    }
+  }
 }
 
 .m-button {

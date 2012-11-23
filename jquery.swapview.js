@@ -22,6 +22,10 @@
     this.$views = $(container).find(this.options.views);
 
     this.init();
+
+    //if (options.autoplay) {
+      //this.play();
+    //}
   }
 
   SwapView.prototype = {
@@ -31,7 +35,7 @@
           $trigger = $container.find(this.options.trigger),
           views = this.options.views,
           $views = $container.find(views),
-          $this = this;
+          self = this;
 
       // Set the default view visibility
       $views.each(function() {
@@ -41,21 +45,49 @@
         }
       });
 
-      // bind the trigger
-      $trigger.bind('click.swapview', function(e) {
+      if (this.multipleTriggers()) {
+        $trigger.each(function(index) {
+          self.bindToSlide($trigger[index]);
+        });
+      } else {
+
+        // bind the trigger
+        $trigger.bind('click.swapview', function(e) {
+          e.preventDefault();
+          self.options.onBeforeSwap.apply(this);
+          self.swap($views);
+        });
+      }
+    },
+
+    bindToSlide: function(item) {
+      var self = this;
+      self.options.onBeforeSwap.apply(this);
+      $(item).on('click', function(e) {
         e.preventDefault();
-        $this.options.onBeforeSwap.apply(this);
-        $this.swap($views);
+        var showId = $(item).attr('href');
+        // find the active view and hide it
+        self.hideView(self.$container.find(self.options.views + '.active'));
+        // show the view matching showId
+        self.showView(self.$container.find('#' + showId));
       });
+    },
+
+    multipleTriggers: function() {
+      if (this.$container.find(this.options.trigger).length > 1) {
+        return true;
+      }
+      return false;
     },
 
     swap: function(views) {
       // default to the first view
-      var nextView = 0;
+      var nextView = 0,
+          self = this;
 
       views.each(function(index, v) {
         if ($(v).hasClass('active')) {
-          $(v).removeClass('active').hide();
+          self.hideView(v);
 
           if (index < views.length - 1) {
             nextView = index + 1;
@@ -64,10 +96,18 @@
       });
 
       // Show the next view
-      $(views[nextView]).show().addClass('active');
+      self.showView(views[nextView]);
 
       // run the callback
       this.options.onAfterSwap.apply(this);
+    },
+
+    showView: function(view) {
+      $(view).addClass('active').show();
+    },
+
+    hideView: function(view) {
+      $(view).removeClass('active').hide();
     }
   };
 

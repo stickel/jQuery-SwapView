@@ -37,8 +37,20 @@ body {
   bottom: -1.5em;
   left: 0;
 }
+/* line 35, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+#container #multiple-triggers .swapview-nav {
+  width: 30em;
+}
+/* line 38, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+#container #multiple-triggers .js-swapview-trigger {
+  border-right: 1px solid #2d4c53;
+}
+/* line 40, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+#container #multiple-triggers .js-swapview-trigger:first-child {
+  border-left: 1px solid #2d4c53;
+}
 
-/* line 34, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
+/* line 47, /Users/stickel/Sites/jquery/plugins/swapview/example/stylesheets/swapview.scss */
 .m-button {
   background: rgba(80, 138, 149, 0.8);
   color: white;
