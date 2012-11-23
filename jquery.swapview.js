@@ -18,6 +18,8 @@
     this.options = $.extend({}, defaults, options);
     this._defaults = defaults;
     this._name = pluginName;
+    this.$container = $(this.container);
+    this.$views = $(container).find(this.options.views);
 
     this.init();
   }
